@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="widht=device-width, initial-scalee=1.0">
+        <title>CJP EATS</title>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--Custon css file link -->
+    <link rel="stylesheet" href="website.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        
+        #menu1{
+            font-size: 20px;
+        }
+        select {
+            
+            -webkit-padding-end: 20px;
+            -moz-padding-end: 20px;
+            -webkit-padding-start: 2px;
+            -moz-padding-start: 2px;
+            background-color: #f4eeee; /* Fallback color if gradients are not supported */
+            background-image: url(../images/select-arrow.png), -webkit-linear-gradient(top, #E5E5E5, #F4F4F4); /* For Chrome and Safari */
+            background-position: center right;
+            background-repeat: no-repeat;
+            border: 1px solid;
+            border-radius: 4px;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+            color: #555;
+            font-size: inherit;
+            margin: 0;
+            overflow: hidden;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("select").mouseenter(function(){
+            $("select").css({"color": "grey"});
+            });
+            $("select").mouseleave(function(){
+            $("select").css({"color": "black"});
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#dark-mode").click(function(){
+                $("body").css({"background-color": "black"});
+                $("header").css({"background-color" : "#322F2F"});
+                $("h1").css({"color" : "white"});
+                $("h3").css({"color" : "white"});
+                $(".box").css({"background-color" : "#322F2F"});
+                $(".card").css({"background-color" : "#322F2F", "color" : "white"});
+                $("#bill").css({"color" : "white"});
+            });
+            $("#light-mode").click(function(){
+                $("body").css({"background-color" : "white"});
+                $("header").css({"background-color" : "white"});
+                $("h1").css({"color" : "black"});
+                $("h3").css({"color" : "var(--black)"});
+                $(".box").css({"background-color" : "white"});
+                $(".card").css({"background-color" : "#e9ecf7" , "color" : "var(--black)"});
+                $("#bill").css({"color" : "var(--black)"});
+            });
+        });
+    </script>
+
+    <script>
+
+        function resetbill(){
+            document.getElementById("bill").innerHTML= "BILL:";
+        }
+
+
+        function bill(){
+            
+            var bill="BILL:<br>";
+
+            var total=0,temp=0;
+            
+            var a=document.getElementById("spegatti");
+            var num1=a.value;
+            var b=document.getElementById("pizza");
+            var num2=b.value;
+            var c=document.getElementById("ramen");
+            var num3=c.value;
+            var d=document.getElementById("paneer tikka");
+            var num4=d.value;
+            var e=document.getElementById("pita");
+            var num5=e.value;
+            var f=document.getElementById("momo");
+            var num6=f.value;
+            var g=document.getElementById("wsoup");
+            var num7=g.value;
+            var h=document.getElementById("msoup");
+            var num8=h.value;
+            var i=document.getElementById("khowSuey");
+            var num9=i.value;
+            
+            var arr1=[["Spaghetti Bolognese",num1],["Veg Pizza",num2],["Tonkotsu Ramen",num3],["Tikka Masala",num4],["Hummus Pita",num5],["Veg Momos",num6],["Wonton Soup",num7],["Manchow Soup",num8],["Khow Suey",num9]];
+            
+            for(let i=0;i<9;i++){
+                if(arr1[i][1]>0){
+                    
+                    if(arr1[i][0]=="Veg Pizza" || arr1[i][0]=="Tonkotsu Ramen" || arr1[i][0]=="Khow Suey"){
+                        temp=500 * arr1[i][1];
+                        total+=temp;
+                    }else if(arr1[i][0]=="Spaghetti Bolognese"){
+                        temp=450 * arr1[i][1];
+                        total+=temp;
+                    }else if(arr1[i][0]=="Tikka Masala"){
+                        temp=250 * arr1[i][1];
+                        total+=temp;
+                    }else if(arr1[i][0]=="Hummus Pita"){
+                        temp=300 * arr1[i][1];
+                        total+=temp;
+                    }else if(arr1[i][0]=="Veg Momos" || arr1[i][0]=="Wonton Soup"){
+                        temp=200 * arr1[i][1];
+                        total+=temp;
+                    }else{
+                        temp=180 * arr1[i][1];
+                        total+=temp;
+                    }
+
+                    bill+=arr1[i][0] + " &emsp;x" + arr1[i][1] + "&emsp;&emsp;Rs." + temp + "<br>";
+                }
+                
+            }
+            subtotal = total;
+            gst = (total/100)*5;
+            total+=gst;
+            bill+="<br>Subtotal:&emsp;Rs." + subtotal + "<br>GST:&emsp;Rs." + gst + "<br>TOTAL:<br>=========<br>Rs." + total + "<br>=========";
+
+            document.getElementById("bill").innerHTML=bill;
+        }
+    </script>
+
+    </head>
+    <body>
+<!--HEADER SECTION STARTS-->
+<header>
+    <a href="#" class="logo"><i class="fas fa-pepper-hot">cjp eats</i></a>
+    <nav class="navbar">
+        <a href="fwd.html">home</a>
+        <a href="fwd1.html">menu</a>
+        <a href="fwd2.html">review</a>
+        <a class="active" href="fwd3.html">order</a>
+        <a href="fwd4.html">about us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-moon" id="dark-mode"></i>
+        <i class="fas fa-sun" id="light-mode"></i>
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+
+    </div>
+</header>
+<!--HEADER SECTION ENDS-->
+
+<!--search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..."name="" id="search-box"></input>
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!--order section starts-->
+
+<section class="menu" id="menu">
+<form action="fwd6.html">
+    <h1 style="font-size: xx-large;" class="font-cond-l fg-accent lts-md mgb-10" style="padding-bottom: 20px;" contenteditable="false">Today's Menu</h1>
+
+    <div class="box-container menu" id = >
+
+        <div class="box">
+            <div class="image">
+                <img src="menu1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Spaghetti Bolognese</h3>
+                <select id="spegatti">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 450</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu2.jpeg" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Pinapple Pizza</h3>
+                <select id="pizza">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 500</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Tonkotsu Ramen</h3>
+                <select id="ramen">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 500</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu4.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Paneer Tikka Masala</h3>
+                <select id="paneer tikka">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 250</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Hummus & Pita</h3>
+                <select id="pita">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 300</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Momos</h3>
+                <select id="momo">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 200</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu7.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Wonton Soup</h3>
+                <select id="wsoup">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 200</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu8.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Manchow Soup</h3>
+                <select id="msoup">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 180</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu9.png" alt="">
+            </div>
+            <div class="content">
+                <h3 id="menu1">Khow suey</h3>
+                <select id="khowSuey">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <span class="price">Rs 500</span>
+            </div>
+        </div>
+
+    </div><br>
+    <button type="button" onclick="return bill()" class="btn btn-primary btn-icon btn-icon-mini btn-round">SHOW BILL</button><br>
+
+    <div class="container blog-page" style="padding-left: 0px; padding-right: 0px; padding-top: 30px; padding-bottom: 0px;">
+        <div class="row clearfix">
+            <div class="col-lg-4 col-md-12">
+                    <div class="card single_post" style="padding: 20px;">
+                        <p id="bill" class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg">BILL:</p><br>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <p id="bill" class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg"></p><br>
+
+    <center>
+        <div class="container blog-page" style="padding-left: 0px; padding-right: 0px; padding-top: 30px; padding-bottom: 0px;">
+            <div class="row clearfix">
+                <div class="col-lg-4 col-md-12">
+                        <div class="card single_post" style="padding: 20px;">
+                            <label style="font-size:18px">Any specific requests?</label>
+                            <br>
+                            <textarea cols="80" rows="5" value="requests" style="border: black solid 1px; border:solid; border-radius: 15px;"></textarea>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-icon btn-icon-mini btn-round">ORDER</button>
+        <button type="reset" class="btn btn-primary btn-icon btn-icon-mini btn-round" onclick="return resetbill()">RESET</button>
+    </center>
+</form>
+</section>
+
+<!--order section ends -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--Custom js file link-->
+    <script src="website.js"></script>    
+    </body>
+</html>

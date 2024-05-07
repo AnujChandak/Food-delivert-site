@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="widht=device-width, initial-scalee=1.0">
+        <title>CJP EATS</title>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--Custon css file link -->
+    <link rel="stylesheet" href="website.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#dark-mode").click(function(){
+                $("body").css({"background-color": "black"});
+                $("header").css({"background-color" : "#322F2F"});
+                $("h3").css({"color" : "white"});
+                $("p").css({"color" : "white"});
+                $(".box").css({"background-color" : "#322F2F"});
+            });
+            $("#light-mode").click(function(){
+                $("body").css({"background-color" : "white"});
+                $("header").css({"background-color" : "white"});
+                $("h3").css({"color" : "var(--black)"});
+                $("p").css({"color" : "var(--light-color)"});
+                $(".box").css({"background-color" : "white"});
+            });
+        });
+    </script>
+
+    </head>
+    <body>
+<!--HEADER SECTION STARTS-->
+<header>
+    <a href="#" class="logo"><i class="fas fa-pepper-hot">cjp eats</i></a>
+    <nav class="navbar">
+        <a href="fwd.html">home</a>
+        <a  class="active" href="fwd1.html">menu</a>
+        <a href="fwd2.html">review</a>
+        <a href="fwd3.html">order</a>
+        <a href="fwd4.html">about us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-moon" id="dark-mode"></i>
+        <i class="fas fa-sun" id="light-mode"></i>
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+
+    </div>
+</header>
+<!--HEADER SECTION ENDS-->
+
+<!--search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..."name="" id="search-box"></input>
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!--Menu section starts-->
+
+<section class="menu" id="menu">
+
+    <div class="box-container menu">
+
+        <div class="box">
+            <div class="image">
+                <img src="menu1.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Spaghetti Bolognese</h3>
+                <p>Consists of spaghetti with an Italian ragù made with minced meat, tomatoes, served with Parmesan cheese</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 450</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu2.jpeg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Pinapple Pizza (Hawaiian)</h3>
+                <p>Classic Pinapple Pizza combines pizza sauce, cheese, cooked ham, and pineapple slices</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 500</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu3.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Tonkotsu Ramen Noodles</h3>
+                <p>Japanese noodle soup, a rich flavoured broth with meats or vegetables along with crispy tonkotsu</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 500</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu4.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Paneer Tikka Masala</h3>
+                <p>Tandoori charred Paneer marinated in yoghurt with delicious chutney and spicy salad</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 250</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu5.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Hummus & Pita</h3>
+                <p> Hummus is a Levantine dip made from cooked, mashed chickpeas or other beans served with Pita bread</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 300</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu6.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Momos</h3>
+                <p>Momo are bite-size dumplings made with a spoonful of stuffing wrapped in dough served with spicy dip</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 200</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu7.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Wonton Soup</h3>
+                <p>Wonton soup is a bouillon-like soup with wontons filled with veggies and meat. A clear and delicious soup</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 200</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu8.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Manchow Soup</h3>
+                <p>It is a dark brown soup prepared with various vegetables, scallions, and spices</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 180</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="menu9.png" alt="">
+                <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Khow suey</h3>
+                <p>Khow suey is a noodle dish in a spiced coconut milk soup that is served with a number of condiments</p>
+                <a href="fwd3.html" class="btn">Place Order</a>
+                <span class="price">Rs 500</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--Custom js file link-->
+    <script src="website.js"></script>    
+    </body>
+</html>

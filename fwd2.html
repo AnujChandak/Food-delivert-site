@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="widht=device-width, initial-scalee=1.0">
+        <title>CJP EATS</title>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--Custon css file link -->
+    <link rel="stylesheet" href="website.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#dark-mode").click(function(){
+                $("body").css({"background-color": "black"});
+                $("header").css({"background-color" : "#322F2F"});
+                $("p").css({"color" : "white"});
+                $("h1").css({"color" : "white"});
+                $("h2").css({"color" : "grey"});
+                $("h3").css({"color" : "darkgrey"});
+                $("li").css({"border-color" : "#322F2F"});
+
+            });
+            $("#light-mode").click(function(){
+                $("body").css({"background-color" : "white"});
+                $("header").css({"background-color" : "white"});
+                $("p").css({"color" : "black"});
+                $("h1").css({"color" : "black"});
+                $("h2").css({"color" : "var(--black)"});
+                $("h3").css({"color" : "black"});
+                $("li").css({"border-color" : "rgba(0,0,0, .2)"});
+            });
+        });
+    </script>
+    </head>
+    <body>
+<!--HEADER SECTION STARTS-->
+<header>
+    <a href="#" class="logo"><i class="fas fa-pepper-hot">cjp eats</i></a>
+    <nav class="navbar">
+        <a href="fwd.html">home</a>
+        <a href="fwd1.html">menu</a>
+        <a class="active" href="fwd2.html">review</a>
+        <a href="fwd3.html">order</a>
+        <a href="fwd4.html">about us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-moon" id="dark-mode"></i>
+        <i class="fas fa-sun" id="light-mode"></i>
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+
+    </div>
+</header>
+<!--HEADER SECTION ENDS-->
+
+<!--search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..."name="" id="search-box"></input>
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!--Review section starts-->
+<div class="container">
+    <div class="mgb-40 padb-30 auto-invert line-b-4 align-center">
+        <h1 style="font-size: xx-large;" class="font-cond-l fg-accent lts-md mgb-10" contenteditable="false">Still having doubts?</h1>
+        <h1 class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg" contenteditable="false">Hear from our fans</h1>
+    </div>
+    <ul class="hash-list cols-3 cols-1-xs pad-30-all align-center text-sm">
+        <li style="padding-top: 1%;">
+          <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="wpx-100 img-round mgb-20" title="" id = "img"alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+          <p class="fs-110 font-cond-l" contenteditable="false">"Very good quality food with super fast delivery!"</p>
+          <h2 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">John Doe</h2>
+          <h3 class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Paralegal</h3>
+        </li>
+        <li style="padding-top: 1%;">
+          <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="wpx-100 img-round mgb-20" title="" id = "img" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+          <p class="fs-110 font-cond-l" contenteditable="false">"Mouthwatering dishes and variety of cuisines"</p>
+          <h2 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Rohan Kanojia</h2>
+          <h3 class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Accountant</h3>
+        </li>
+        <li style="padding-top: 1%;">
+          <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="wpx-100 img-round mgb-20" title="" id = "img" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+          <p class="fs-110 font-cond-l" contenteditable="false">"Food arrived within 20 minutes!!!"</p>
+          <h2 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Ariana</h2>
+          <h3 class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Fund Manager</h3>
+        </li>
+        <li style="padding-top: 1%;">
+            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="wpx-100 img-round mgb-20" id = "img" title="" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+            <p class="fs-110 font-cond-l" contenteditable="false">"Food was excellent..."</p>
+            <h2 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Kevin</h2>
+            <h3 class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Politician</h3>
+          </li>
+          <li style="padding-top: 1%;">
+            <img src="https://bootdey.com/img/Content/avatar/avatar4.png" class="wpx-100 img-round mgb-20" title="" id ="img" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+            <p class="fs-110 font-cond-l" contenteditable="false">"Delicious!! Would definitely order again!"</p>
+            <h2 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">foodreviewer99</h2>
+            <h3 class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Artist</h3>
+          </li>
+          <li style="padding-top: 1%;">
+            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" class="wpx-100 img-round mgb-20" title="" id = "img" alt="" data-edit="false" data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+            <p class="fs-110 font-cond-l" contenteditable="false">"Wanted to quit after eating food that was so much better than I could ever cook...."</p>
+            <h2 class="font-cond mgb-5 fg-text-d fs-130" contenteditable="false">Sanjeev Kapoor</h2>
+            <h3 class="font-cond case-u lts-sm fs-80 fg-text-l" contenteditable="false">Chef</h3>
+          </li>
+      </ul>
+</div>
+
+
+<!--Review section ends-->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--Custom js file link-->
+    <script src="website.js"></script>    
+    </body>
+</html>

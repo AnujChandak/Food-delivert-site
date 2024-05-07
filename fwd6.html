@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="widht=device-width, initial-scalee=1.0" />
+    <title>CJP EATS</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script>
+      setTimeout(function () {
+        window.location.href = "fwd.html";
+      }, 5000);
+    </script>
+    <script
+      type="text/javascript"
+      src="https://www.tutorialspoint.com/jquery/jquery-3.6.0.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"
+    ></script>
+
+    <!--font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <!--Custon css file link -->
+    <link rel="stylesheet" href="website.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      var ord_id = Math.floor(Math.random() * (100000 - 4000 + 1)) + 4000;
+      var text = "Order ID: " + ord_id;
+      document.write(
+        '<p style="font-size: 15px; padding-left: 20px;" class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg">' +
+          text +
+          "</p>"
+      );
+    </script>
+  </head>
+  <body>
+    <center>
+      <div
+        class="container blog-page"
+        style="
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-top: 30px;
+          padding-bottom: 0px;
+        "
+      >
+        <div class="row clearfix">
+          <div class="col-lg-4 col-md-12">
+            <div class="card single_post" style="padding: 20px">
+              <p id="order"
+                style="font-size: 30px"
+                class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg">
+                Your order has been placed. Arriving shortly!!
+              </p>
+              <br />
+              <img src="Order_placed.gif" height="300px" width="400px" />
+              <p class="font-cond-b fg-text-d lts-md fs-300 fs-300-xs no-mg">
+                Redirecting to home page....
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </center>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--Custom js file link-->
+    <script src="website.js"></script>
+  </body>
+</html>

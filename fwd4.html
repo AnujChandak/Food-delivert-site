@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="widht=device-width, initial-scalee=1.0">
+        <title>CJP EATS</title>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!--font awesome cdn link --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--Custon css file link -->
+    <link rel="stylesheet" href="website.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#dark-mode").click(function(){
+                $("body").css({"background-color": "black"});
+                $("header").css({"background-color" : "#322F2F"});
+                $(".white").css({"color" : "white"});
+            });
+            $("#light-mode").click(function(){
+                $("body").css({"background-color" : "white"});
+                $("header").css({"background-color" : "white"});
+                $(".white").css({"color" : "black"});
+            });
+        });
+    </script>
+    </head>
+    <body>
+<!--HEADER SECTION STARTS-->
+<header>
+    <a href="#" class="logo"><i class="fas fa-pepper-hot">cjp eats</i></a>
+    <nav class="navbar">
+        <a href="fwd.html">home</a>
+        <a href="fwd1.html">menu</a>
+        <a href="fwd2.html">review</a>
+        <a href="fwd3.html">order</a>
+        <a class="active"href="fwd4.html">about us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-moon" id="dark-mode"></i>
+        <i class="fas fa-sun" id="light-mode"></i>
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+
+    </div>
+</header>
+<!--HEADER SECTION ENDS-->
+
+<!--search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..."name="" id="search-box"></input>
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<section>
+    <center>
+    <h1 style="font-size: 40px; color:#ae2727"> About us </h1>
+    <br>
+    <p style="font-size: 20px;" class = "white">We are the Fastest online food delivery company in the country, We have outlets in 23 states</p>
+    <p style="font-size: 20px;" class = "white"><strong>The minds behind our Success</strong></p><br>
+    </center>
+
+    <div class="container blog-page">
+        <div class="row clearfix">
+            <div class="col-lg-4 col-md-12">
+                <div class="card single_post">
+                    <div class="body">
+                        <ul class="meta">
+                            <li><a href=""><i class="zmdi zmdi-account col-blue"></i>Third Year Student BTI-Computer at MPSTME.</a></li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="img-post m-b-15">
+                            <img src="raj.jfif" style="border-radius: 8px; width:300px; height: 300px; border: 1px solid #ddd; padding: 10px;">
+                            <div class="social_share">
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-instagram"></i></button>
+                            </div>
+                        </div>
+                        <p><strong>Raj Parmar</strong> : This business has been my life-long dream and it is my greatest accomplishment that I could achieve all this success along with my college mates.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card single_post">
+                    <div class="body">
+                        <ul class="meta">
+                            <li><a href=""><i class="zmdi zmdi-account col-blue"></i>Third Year Student BTI-Computer at MPSTME.</a></li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="img-post m-b-15">
+                            <img src="aaryaman.jfif" style="border-radius: 8px; width:300px; height: 300px; border: 1px solid #ddd; padding: 10px;">
+                            <div class="social_share">
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-instagram"></i></button>
+                            </div>
+                        </div>
+                        <p><strong>Aaryaman Jagani</strong> : I've been working hard for this business since day one. And to finally sit back and look at the what we've achieved is my greatest pleasure.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card single_post">
+                    <div class="body">
+                        <ul class="meta">
+                            <li><a href=""><i class="zmdi zmdi-account col-blue"></i>Third Year Student BTI-Computer at MPSTME.</a></li>
+                        </ul>
+                    </div>
+                    <div class="body">
+                        <div class="img-post m-b-15">
+                            <img src="anuj.jfif" style="border-radius: 8px; width:300px; height: 300px; border: 1px solid #ddd; padding: 10px;">
+                            <div class="social_share">
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-facebook"></i></button>
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-twitter"></i></button>
+                                <button class="btn btn-primary btn-icon btn-icon-mini btn-round"><i class="zmdi zmdi-instagram"></i></button>
+                            </div>
+                        </div>
+                        <p><strong>Anuj Chandak</strong> : We still have a long way to go, but enjoying our success is still just as important.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12" style="background-color: rgb(192, 55, 55); padding-bottom:0%;">
+                <div class="card single_post">
+                    <div class="body" style="background-color: rgb(192, 55, 55);">
+                        <p style="color: white; font-size: medium;">Contact : 022987654321</p>
+                        <p style="color: white; font-size: medium; text-transform: lowercase;">Email: araara@gmail.com</p><br>
+                        <center><p style="color: white; font-size: xx-large;">THANK YOU</p></center>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+<!-- about section ends -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--Custom js file link-->
+    <script src="website.js"></script>    
+    </body>
+</html>
+

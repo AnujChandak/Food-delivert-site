@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="widht=device-width, initial-scalee=1.0">
+        <title>CJP EATS</title>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
+    <!--font awesome cdn link --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!--Custon css file link -->
+    <link rel="stylesheet" href="website.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#dark-mode").click(function(){
+                $("body").css({"background-color": "black"});
+                $("header").css({"background-color" : "#322F2F"});
+            });
+            $("#light-mode").click(function(){
+                $("body").css({"background-color" : "white"});
+                $("header").css({"background-color" : "white"});
+            });
+        });
+    </script>
+    </head>
+    <body>
+<!--HEADER SECTION STARTS-->
+<header>
+    <a href="#" class="logo"><i class="fas fa-pepper-hot">cjp eats</i></a>
+    <nav class="navbar">
+        <a class="active" href="fwd.html">home</a>
+        <a href="fwd1.html">menu</a>
+        <a href="fwd2.html">review</a>
+        <a href="fwd3.html">order</a>
+        <a href="fwd4.html">about us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-moon" id="dark-mode"></i>
+        <i class="fas fa-sun" id="light-mode"></i>
+        <i class="fas fa-bars" id="menu-bars"></i>
+
+        <i class="fas fa-search" id="search-icon"></i>
+
+
+    </div>
+</header>
+<!--HEADER SECTION ENDS-->
+
+<!--search form -->
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..."name="" id="search-box"></input>
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+<!--home section starts-->
+<section class="home" id="home">
+    <div class="swiper mySwiper home-slider">
+        <div class="swiper-wrapper wrapper">
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our Special Dish</span>
+                    <h3>Humus Pita</h3>
+                    <p>Salaciously-smooth, this creamy hummus is best served prettily swirled on your favourite plate, speckled with spices and a gallimaufry of garnishes.</p>
+                    <a href="fwd3.html" class="btn">Place Your Order</a>
+                </div>
+                <div class="image">
+                    <img src="humus-pitajpg.jpg" width="150%" height="150%"alt="" style="border-radius: 100px;">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our Special Dish</span>
+                    <h3>Paneer Tikka</h3>
+                    <p>Delicious and Exotic vegetarian starter where paneer cubes are marinated in a spice yogurt-based marinade, arranged in skewers and grilled in oven or stovetop.</p>
+                    <a href="fwd3.html" class="btn">Place Your Order</a>
+                </div>
+                <div class="image">
+                    <img src="paneer-tikka.jpg" width="150%" height="150%"alt="" style="border-radius: 100px;">
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <span>Our Special Dish</span>
+                    <h3>Pizza</h3>
+                    <p>An Exotic white pizza that’s covered with mozzarella cheese, goat cheese, and fresh herbs. It’s perfection!.</p>
+                    <a href="fwd3.html" class="btn">Place Your Order</a>
+                </div>
+                <div class="image">
+                    <img src="pizza.jpg" width="150%" height="150%" alt="" style="border-radius: 100px;">
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+</section>
+<!--home section ends-->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!--Custom js file link-->
+    <script src="website.js"></script>    
+    </body>
+</html>
